@@ -1,0 +1,25 @@
+<h2 align="center">
+  View Doctor
+</h2>
+<div *ngIf="(doctorList?.length > 0)">
+  <div class="table-responsive">
+
+    <table align="center" class="table" style="border:2px solid rgba(220,230,242,1);">
+      <tr style="background-color:rgba(220,230,242,1); font-size:12pt">
+        <th>Doctor Id</th>
+        <th>Doctor Name</th>
+        <th>Doctor Specialization</th>
+      </tr>
+
+      <tr id="doctorsList_id" style="background-color:white">
+        <!--Implement display logic here-->
+      </tr>
+    </table>
+
+  </div>
+</div>
+<div  *ngIf="showMsgDiv">
+  <br/>
+  <h3 class="jumbotron" style="text-align:center;">No Doctor Available</h3>
+</div>
+

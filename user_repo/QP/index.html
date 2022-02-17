@@ -1,0 +1,870 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="./css/styles.ec294d85b6bb1cdfb839.css">
+    <script src="./js/jquery.min.js" rel="text/javascript"></script>
+    <script src="./js/jquery-ui.min.js" rel="text/javascript"></script>
+    <script src="./js/bootstrap.js" rel="text/javascript"></script>
+</head>
+
+<body>
+
+    <nav class="uk-navbar-container uk-navbar">
+        <div class="uk-navbar-left">
+            <img style="float:left;margin-top:8px;margin-left:15px;margin-right:15px;margin-bottom:8px"
+                src="img/Asset 8.png" />
+            <a class="uk-margin-left-small uk-button uk-button-primary decpadding" href="#" id="questions"
+                onclick="showWelcome()">
+                <span class="nav-text uk-visible@s">About</span>
+            </a>
+            <a class="uk-margin-left-small uk-button uk-button-primary decpadding" href="#" id="instructions"
+                onclick="showInstructions()">
+                <span class="nav-text uk-visible@s">Quickstart</span>
+            </a>
+			<a class="uk-margin-left-small uk-button uk-button-primary decpadding" href="#" id="Execution"
+                onclick="showDemo()">
+                <span class="nav-text uk-visible@s">Execution Instructions</span>
+            </a>
+            <a class="uk-margin-left-small uk-button uk-button-primary decpadding" href="#" id="capston"
+                onclick="showCapston()">
+                <span class="nav-text uk-visible@s">Question paper</span>
+            </a>
+        </div>
+    </nav>
+
+    <div class="uk-container">
+
+        <div style="display:none" id="instructions_p">
+            <br />
+            <div>
+                <div align="center">
+                    <span class="heading" style="font-size: 30px">Let's get started !</span>
+                </div>
+            </div>
+            <br>
+
+
+
+
+
+            <p style="padding-top: 15px; margin-bottom: .0001pt; line-height: normal; background: white;">
+                <span class="heading"><b>Setup and Recovery Instructions</b></span>
+            </p>
+            <br>
+            <ul type="disc">
+                <li>
+                    On the desktop, double click on the file <strong>‘click-here.bat’.</strong>  This will open the browser with necessary instructions, question and two command prompt windows, one performs the angular cli installation and the other performs node_modules extraction from zip file.
+                </li>
+				<li>You can minimize the command prompts and continue with coding while the extraction happens in the background. Kindly do not close the command prompts as this will stop the extraction.</li>
+                 <li>In case you close the browser tab inside the VM, you can always execute the file <strong>‘instruction.bat‘ </strong> kept on desktop to open it again</li>
+                <li>The starter code required for the certification has been loaded into your environment and is present in  <strong> ‘user_repo‘</strong> directory on the desktop. Do not delete this directory</li>
+                <li>
+                    Open the user_repo folder present on the desktop and navigate to "CureWell" folder. Inside this folder,
+                    you have been provided with "CureWell.sln" file, double click on that file.
+                    If you get pop up to select IDE, select Visual Studio 2019
+                </li>
+
+                <img width="300"
+                     height="300"
+                     src="./img/diagram1.png"
+                     border="1" />
+
+                <li>
+                    If you get a sign in pop up window, Click on Sign in and kindly sign in with Infosys credentials and MFA authentication
+                </li>
+                <img width="300"
+                     height="300"
+                     src="./img/diagram2.png"
+                     border="1" />
+                <li>
+                    After opening the project in Visual Studio 2019, wait until the dependencies get restored.
+                    On successful restore, the warnings symbol over dependencies will disappear
+                </li>
+                <li>
+                    You have been provided with three projects
+                    <ul>
+                        <li>CureWellDataAccessLayer- Data Access Layer </li>
+                        <li>CureWellWebServices- ASP.NET Core Web API project</li>
+                        <li>CureWellApp- Angular project </li>
+                    </ul>
+                </li>
+                <li>Proceed with coding only after loading your entire project</li>
+                <li>You're all set to code now! Start with the mock certification! Good luck!</li>
+            </ul>
+            <br>
+            <!-- <p style="margin-bottom: .0001pt; line-height: normal; background: white;"><span class="heading">Project
+                        Instruction:</span></p>
+                <br>
+                <p>
+                    You are provided with a project containing a data access layer project built with Entity framework
+                    core and a web service project, built with ASP.Net Web API core.
+                </p>
+                <ol>
+                    <li>
+                        In the Visual Studio code window which is launched, open the controller files as required and
+                        implement the logic
+                    </li>
+
+                    <li>
+                        To run the service, navigate to the service project folder using the Terminal and use the
+                        command dotnet run.
+                    </li>
+
+                    <li>
+                        Test your service methods using the POSTMAN client.
+                    </li>
+
+                </ol>
+                <p>
+                    <b>Note:</b>For other .Net CLI commands, you can use the command <b>dotnet –h</b>
+                </p>
+                <br> -->
+
+            <div align="center">
+                <button class="uk-button uk-button-primary uk-button-small"
+                        onclick="showWelcome();">
+                    Prev
+                </button>&nbsp;&nbsp;&nbsp;<button onclick="showDemo()"
+                                                   class="uk-button uk-button-primary uk-button-small">
+                    Next
+                </button>
+            </div>
+        </div>
+
+        <br>
+        <br>
+        <div style="display:none" id="questions_p">
+            <div>
+                <iframe style="display: block; width: 100%; height: 100%; border: none;" src="./Exercise/Exercise.html"
+                        align="top">
+                </iframe>
+            </div>
+
+
+            <div align="center">
+                <button class="uk-button uk-button-primary uk-button-small"
+                        onclick="showInstructions();">
+                    Prev
+                </button>
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                <button onclick="showCapston()" class="uk-button uk-button-primary uk-button-small">Next</button>
+            </div>
+            <p style="line-height: 115%; margin: 0cm 0cm .0001pt 18.0pt;">&nbsp;</span></p>
+        </div>
+
+        <!--------------------------------------------------------------------------------------->
+        <div style="display:none" id="demos_home">
+
+        </div>
+        <!--------------------------------------------------------------------------------------->
+
+        <div style="display:none" id="welcome_p">
+
+            <div>
+                <div align="center">
+                    <span class="heading" style="font-size: 30px">Infosys Certified Angular (MS) Associate - Practice/Mock </span>
+                </div>
+            </div>
+
+            <br>
+            <span class="heading"><b>Introduction</b></span>
+            <p>
+                Angular is the most powerful UI framework which can be used to develop complex, customizable, modern, responsive and user friendly web applications. ASP.NET Core is a framework built on top of .NET Core framework that leverages C# to design web applications with
+                Web APIs. In the environment provided to you, you will be developing presentation tier using Angular and its corresponding API endpoints using ASP.NET Core Web API. If you are not familiar with ASP.NET Core Web API and Angular, we recommend going through the Lex courses &lsquo;<b>Developing Services using ASP.NET Core Web API</b>&rsquo; and &lsquo;<b>Angular for .NET Developers</b>&rsquo; before taking this certification.
+            </p>
+
+
+            <span class="heading"><b>Environment Details</b></span>
+            <p>
+                Microsoft Visual Studio IDE is preferred for development.
+            </p>
+
+
+            <table border="0">
+                <ul>
+                    <tr>
+                        <th style="padding:10px ;text-align: left;font-size: 15px">
+                            Tools Involved
+                        </th>
+                        <th style="padding:10px ;text-align: left;font-size: 15px">
+                            Version
+                        </th>
+                    </tr>
+                    <tr>
+                        <td style="padding:8px">
+                    <li>
+                        Visual Studio 2019
+                    </li>
+
+                    </td>
+                    <td style="padding:8px">
+                        64-bit for Windows
+                    </td>
+                    </tr>
+                    <tr>
+                        <td style="padding:8px">
+                    <li>
+                        Postman
+                    </li>
+                    </td>
+                    <td style="padding:8px">
+                        v6.3.0 64-bit for Windows
+                    </td>
+                    </tr>
+                    <tr>
+                        <td style="padding:8px">
+                    <li>
+                        Node.js
+                    </li>
+                    </td>
+                    <td style="padding:8px">
+                        v12.18.3 64-bit for Windows
+                    </td>
+                    </tr>
+                </ul>
+            </table>
+
+            <br />
+
+            <span class="heading"><b>General Instructions</b></span>
+
+            <ul>
+                <li>
+                    An environment containing necessary software and tools is provided
+                </li>
+                <li>Please note that this environment is for a limited time only</li>
+                <li>To exit this environment, click on Finish button and close the browser tab</li>
+                <li>Your code cannot be retrieved once you exit this environment</li>
+
+            </ul>
+
+            <div align="center">
+                <button class="uk-button uk-button-primary uk-button-small uk-flex uk-flex-middle uk-icon"
+                        onclick="showInstructions()">
+                    Next
+                </button>
+            </div>
+            <br>
+        </div>
+
+
+
+        <!--------------------------------------------------------------------------------------->
+        <div style="display:none" id="demos_p">
+            <div>
+                <span class="heading"><b>Execution Instructions</b></span>
+
+                <p>
+                    <strong>
+                        Instructions for executing Web API:
+                    </strong>
+                <p>
+                    <ul>
+                        <li>To build the application, right click on the solution and select "Build Solution" option</li>
+                        <li>Make sure that the ASP .Net Core Web API Project is startup project. In order make it as startup project, right click on the ASP .Net project and select "Set as StartUp Project" option</li>
+                        <li>Select IIS Express Web Browser as Google Chrome</li>
+                        <br />
+                        <img src="./img/googlechrome.PNG" width="400" height="800" alt="No Image" border="1">
+                        <br />
+                        <br />
+                        <li>After successful build, press ctrl+F5 to run your application</li>
+                        <li>After implementing the solution, use Postman application to check the API</li>
+                        <li>Double click on the Postman icon in the desktop. You can close the Sign in window and it will directly open the app. Now you can test your API</li>
+                    </ul>
+                <p>
+                    <strong>
+                        Instructions for executing Angular application:
+                    </strong>
+                <p>
+                    <ul>
+                        <li>CureWellApp is available as a part of solution. Switching to folder view is not required.</li>
+                        <br />
+                        <img src="./img/App.PNG" width="300" height="600" alt="No Image" border="1">
+                        <br />
+                        <br />
+                        <li>
+                           You will be notified on the completion of node_modules extraction as shown below
+                        </li>
+                        <br />
+                        <img src="./img/node_message.PNG" width="300" height="600" alt="No Image" border="1">
+                        <br />
+                        <br />
+                        <li>On completion of extraction, the node_modules will be available inside the angular application folder. All the files should be immediately present inside the node_modules (Ensure that there is no nested node_modules folder structure). Refer the image given below.</li>
+                        <br />
+                        <img src="./img/Node_modules_struct.PNG" width="500" height="1000" alt="No Image" border="1">
+                        <br />
+                        <br />
+                        <li>Make Google chrome as default browser in browser settings</li>
+                        <li>
+                            Use Node.js command prompt to run your angular application. Paste the angular application path and provide ng serve -o to launch your project in browser
+                        </li>
+                        <li>Ensure that the Web API services are running in the background</li>
+
+                    </ul>
+                <p>
+                    <strong>
+                        General Execution Instructions:
+                    </strong>
+                <p>
+                    <ul>
+
+                        <li>
+                            In order to test your code against the test-cases, you can click on the <b>Execute</b> button present in the environment at the right side of the screen
+                        </li>
+                        <li>
+                            <b>Save all the files before clicking Execute button</b>
+                        </li>
+                        <li>
+                            A modal window will show you the number of test cases that have passed and failed for your code
+                        </li>
+
+                        <li>Only when the node_modules extraction is complete the number of test cases passed in Angular will be included</li>
+
+                        <li>
+                            In case the output shows<b> - Module1 as Build Failed-Total test cases as 1, Success as 0 and Failed as 1,</b>
+                            it means that your code is either structurally or logically incorrect. In such cases, please ensure that you create all the required fields,
+                            properties and method signature along with appropriate access specifiers as described in the question paper.<b>
+                                If you miss out on creating
+                                any field or if you alter the access specifiers or if you create any extra variable, properties or methods your code will not be evaluated
+                            </b>
+                        </li>
+                        <li>If few of the test cases are failing, check whether you have implemented the exception handling, data annotations, headers for the methods and ensure your code is logically correct</li>
+
+
+                        <li>Afer viewing the results, if your code throws any reference missing exception or any build errors in visual studio build your solution</li>
+                        <li>Submit code without any compilation errors</li>
+                        <li>
+                            Save all the files and submit the code
+                        </li>
+
+                    </ul>
+
+            </div>
+
+            <div align="center">
+                <button class="uk-button uk-button-primary uk-button-small"
+                        onclick="showInstructions();">
+                    Prev
+                </button>
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                <button onclick="showCapston()" class="uk-button uk-button-primary uk-button-small">Next</button>
+            </div>
+        </div>
+        <!---------------------------------------------------------------------------------------->
+
+        <div style="display:none" id="capston_p">
+            <div class="row">
+                <h3 style="text-align: center;font-size: 30px">
+                    Infosys Certified Angular (MS) Associate - Practice/Mock
+                </h3>
+            </div>
+            <div class="row">
+                <p>
+                    <strong>
+                        Instructions to candidates:
+                    </strong>
+                <p>
+                    <ol>
+                        <li>Read the problem statement, functionality and the other details provided carefully and implement the solution</li>
+                        <li>The questions and the functionality sequence are not in any specific order. So, the implementation can be done in the order of your convenience</li>
+                        <li>The coding standards and comments are mandatory wherever applicable</li>
+                        <li>Follow the class diagram strictly</li>
+                        <li>Use case sensitive string comparison wherever applicable</li>
+                        <li>
+                            <strong>Do not</strong>
+                            <ul>
+                                <li>delete the project or its content</li>
+                                <li>modify the file structure of the project</li>
+                                <li>modify the code or the signature of the methods under "Do Not Modify" or "Do Not Modify Signature" regions</li>
+
+                            </ul>
+
+                        <li>Code submitted with structural/compilation/runtime errors will not get evaluated</li>
+
+                    </ol>
+
+                <p>
+                    <strong>
+                        Common errors which might lead to non-evaluation of code:
+                    </strong>
+                <p>
+                    <ol>
+                        <li>Removal/modification of namespace name</li>
+                        <li>Improper/partial implementation of properties</li>
+                        <li>Infinite loops/infinite recursive calls in the code</li>
+                        <li>Improper constructor prototype or definition</li>
+                        <li>Any other class diagram violation</li>
+                    </ol>
+                <p><b>NOTE: NOT adhering to the above instructions and guidelines may lead to drastic reduction in your score even if the code is executing without any errors</b></p>
+
+            </div>
+            <div class=row">
+                <h4 style="text-align: center;font-size: 30px">
+                    Cure Well - Hospital Management Web Application
+                </h4>
+            </div>
+
+
+            <div class="row">
+                <p>
+                    <strong>
+                        General guidelines on naming conventions:
+                <p></strong>
+                <p>The ASP.NET coding standards to be followed in the application are as follows:</p>
+                <img src="./img/ASP_stand.PNG" style="display:block;margin: auto" alt="No Image" />
+                <p>The Angular coding standards to be followed in the application are as follows:</p>
+                <img src="./img/data_stand.PNG" style="display:block;margin: auto" alt="No Image" />
+            </div>
+
+
+            <div class="row">
+                <p>
+                    <strong>
+                        Problem Statement:
+                <p></strong>
+                <p>
+                    “Cure Well” is a renowned hospital in Sydney. They require an application to plan surgeries based on the specialization and availability of doctors. You have been provided with data access layer created using Entity Framework Core and data is provided in static lists. You are expected to implement the ASP.NET Core Web API and Angular application for the given requirements.
+                </p>
+
+            </div>
+
+
+            <div class="row">
+
+                The provided solution has the following items:
+                <ul>
+                    <li>CureWellDataAccessLayer- Data access layer class library</li>
+                    <li>CureWellWebServices - ASP.NET Core Web API application</li>
+                    <li>CureWellApp - Angular project</li>
+                </ul>
+                <br />
+
+            </div>
+
+            <div class=row">
+                <h5 style="text-align: center;font-size: 30px">
+                    Data access layer implementation details
+                </h5>
+                <p>The following methods are implemented in the data access layer: </p>
+                <img src="./img/repo_diag.PNG" alt="No Image"><br />
+                <p><strong>NOTE : DoctorList, SurgeryList are static properties. They have been initialized with appropriate values inside the static constructor.</strong></p>
+                <p>The following methods of the data access layer uses the above static lists.</p>
+                <table border="1">
+                    <tr>
+                        <th>S.No.</td>
+                        <th>Method Name</th>
+                        <th>Description</th>
+                        <th>Return Values</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>UpdateSurgeryDetails</td>
+                        <td>Updates the surgery details in the static list SurgeryList</td>
+                        <td>true in case of successful execution.<br />false in case of any exception(s)</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>GetAllDoctors</td>
+                        <td>Retrieves all the doctor details</td>
+                        <td>List&lt;Doctor&gt; in case of success.<br />null in case of any exception(s)</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>GetAllSurgeryDetails</td>
+                        <td>Retrieves all the surgery details </td>
+                        <td>List&lt;Surgery&gt;in case of success.<br />null in case of any exception(s)</td>
+                    </tr>
+
+
+                </table>
+            </div>
+            <br />
+            <br />
+            <div class="row">
+                <h5 style="text-align: center;font-size: 30px">
+                    Service layer implementation details
+                </h5>
+
+                <p><strong>Note: Implement structured exception handling in all the methods</strong></p>
+
+                <p>Create the Model classes (Web API Application) as per the following class diagram</p>
+                <img src="./img/Models_diag.PNG" alt="No Image"><br />
+                <p>Data annotations should be implemented as given below:</p>
+                <ul>
+                    <li>DoctorId and DoctorSpecialization are mandatory fields in Doctor class</li>
+                    <li>SurgeryId, DoctorId and SurgeryDate are mandatory fields in Surgery class</li>
+                </ul>
+
+
+
+                <br />
+                <div class="row">
+                    <p>
+                        <strong>
+                            Controller implementation:
+                        </strong>
+                    <p>
+                        <table border="1">
+                            <tr>
+                                <th>Action Name</th>
+                                <th>Description</th>
+                                <th>HTTP Method Type</th>
+                            </tr>
+                            <tr>
+                                <td>FetchAllDoctors</td>
+                                <td>
+                                    <ul>
+                                        <li>Should fetch all the doctor details</li>
+                                        <li>This should be achieved by calling the GetAllDoctors method of data access layer</li>
+                                        <li>It should return List&lt;CureWellWebServices.Models.Doctor&gt; if fetched successfully, else return null</li>
+                                        <li>All the result should be returned as JsonResult</li>
+                                    </ul>
+                                </td>
+                                <td><center>GET</center></td>
+                            </tr>
+
+                            <tr>
+                                <td>FetchAllSurgeryDetails</td>
+                                <td>
+                                    <ul>
+                                        <li>Should fetch all the surgery details</li>
+                                        <li>This should be achieved by calling the GetAllSurgeryDetails method of data access layer</li>
+                                        <li>It should return List&lt;CureWellWebServices.Models.Surgery&gt; if fetched successfully, else return null</li>
+                                        <li>All the result should be returned as JsonResult</li>
+                                    </ul>
+                                </td>
+                                <td><center>GET</center></td>
+                            </tr>
+
+                            <tr>
+                                <td>UpdateSurgeryDetails</td>
+                                <td>
+                                    <ul>
+                                        <li>Should update the surgery details in the Surgery list</li>
+                                        <li>This should be achieved by calling the UpdateSurgeryDetails method of data access layer</li>
+
+                                        <li>It should return the value returned by data access layer method in case of successful invocation</li>
+                                        <li>In case of any exception return false</li>
+                                    </ul>
+                                </td>
+                                <td><center>PUT</center></td>
+                            </tr>
+
+
+                        </table>
+                    <p>Provide appropriate HTTP verb for each action in the controller.</p>
+                </div>
+                <br />
+
+                <div class="row">
+                    <h5 style="text-align: center;font-size: 30px">
+                        Presentation layer implementation details
+                    </h5>
+
+                    <p>
+                        <strong>Note:</strong>
+                        <ul>
+                          
+                            <li>Implement exception handling in all the service methods</li>
+                        </ul>
+                    </p>
+
+
+                    <p>
+                        <strong>
+                            Implementation of CureWellService
+                        </strong>
+                    <p>
+                    <p>The following methods in <b>‘curewell.service.ts’</b> need to be implemented </p>
+                    <table border="1">
+                        <tr>
+                            <th>Action Name</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>getDoctors</td>
+                            <td>
+                                <ul>
+                                    <li>Should fetch all the doctor details by consuming the appropriate Web API method </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>getAllSurgeriesDetails</td>
+                            <td>
+                                <ul>
+                                    <li>Should fetch all the surgery details by consuming the appropriate Web API method </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>editSurgery</td>
+                            <td>
+                                <ul>
+                                    <li>Should update the list of surgery details by consuming the appropriate Web API method </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>errorHandler</td>
+                            <td>
+                                <ul>
+                                    <li>Should be called in case of any exception in the curewell.service.ts</li>
+
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <br />
+
+                <div class="row">
+
+                    <p>
+                        <strong>
+                            Component implementation of view-surgery-details
+                        </strong>
+                    <p>
+                    <p>The following methods in <b>‘view-surgery-details.component.ts’ </b>need to be implemented</p>
+                    <table border="1">
+                        <tr>
+                            <th>Method Name</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>ngOnInit</td>
+                            <td>
+                                <ul>
+                                    <li>Invoke getSurgeryDetails() method of ViewSurgeryDetailsComponent to fetch the details of all the surgeries</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>getSurgeryDetails</td>
+                            <td>
+                                <ul>
+                                    <li>Invoke the appropriate method of curewell.service.ts to fetch the details of all the surgeries</li>
+                                    <li>
+                                        In case of successful execution,
+                                        <ul>
+                                            <li>Store the response in the variable ‘surgeryList’</li>
+                                            <li>Set the variable ‘showMsgDiv’ to hide the message in the corresponding view</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        In case of any error,
+                                        <ul>
+                                            <li>Set the variable ‘surgeryList’ to null</li>
+                                            <li>Store the response in the variable ‘errorMsg’</li>
+                                            <li>Set the variable ‘showMsgDiv’ to show the message in the corresponding view</li>
+
+                                        </ul>
+                                    </li>
+
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>editSurgery</td>
+                            <td>
+                                <ul>
+                                    <li>On click of ‘Edit Surgery’ button in view-surgery-details.component.html, this method must be invoked by passing the required parameters</li>
+                                    <li>Navigate to the UpdateSurgeryComponent by passing the required parameters as route parameters (Refer to the app.routing.ts file for the order)</li>
+
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <br />
+
+                <div class="row">
+                    <p>
+                        <strong>
+                            Component implementation of view-doctor
+                        </strong>
+                    <p>
+                    <p>The following methods in <b>‘view-doctor.component.ts’</b> need to be implemented </p>
+                    <table border="1">
+                        <tr>
+                            <th>Method Name</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>ngOnInit</td>
+                            <td>
+                                <ul>
+                                    <li>Invoke the method getDoctor() of the ViewDoctorComponent to fetch the details of all the doctors </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>getDoctor</td>
+                            <td>
+                                <ul>
+                                    <li>Invoke the appropriate method of curewell.service.ts to fetch the details of all the doctors</li>
+                                    <li>
+                                        In case of successful execution,
+                                        <ul>
+                                            <li>Store the response in the variable ‘doctorList’ </li>
+                                            <li>Set the variable ‘showMsgDiv’ to hide the message in the corresponding view</li>
+                                        </ul>
+
+                                    </li>
+                                    <li>
+                                        In case of any error,
+                                        <ul>
+                                            <li>Set the variable ‘doctorList’ to null</li>
+                                            <li>Store the response in the variable ‘errorMsg’</li>
+                                            <li>Set the variable ‘showMsgDiv’ to show the message in the corresponding view</li>
+                                        </ul>
+                                    </li>
+
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <br />
+
+                <div class="row">
+                    <p>
+                        <strong>
+                            Component Implementation of update-surgery
+                        </strong>
+                    <p>
+                    <p>	The following methods in <b>‘update-surgery.component.ts’</b> need to be implemented  </p>
+                    <table border="1">
+                        <tr>
+                            <th>Method Name</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>ngOnInit</td>
+                            <td>
+                                <ul>
+                                    <li>Initialize the variables ‘surgeryId’, ‘doctorId’, ’surgeryDate’, ’startTime’, ’endTime’ and ‘surgeryCategory’ with values received from url route parameters</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>editSurgery</td>
+                            <td>
+                                <ul>
+                                    <li>Should update the surgery details by invoking the appropriate method of curewell.service.ts </li>
+                                    <li>
+                                        On successful update of surgery details,
+                                        <ul>
+                                            <li>Store the response in the variable ‘status’ </li>
+                                            <li>If the response is true, display ‘Surgery details updated successfully!’ using an alert box. Navigate to ViewSurgeryDetailsComponent</li>
+                                            <li>Else display ‘Surgery details not updated’ using an alert box. Navigate to ViewSurgeryDetailsComponent</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        In case of any error,
+                                        <ul>
+                                            <li>Store the response in the variable ‘errorMsg’ </li>
+                                            <li>Navigate to ViewSurgeryDetailsComponent</li>
+                                        </ul>
+                                    </li>
+
+                                </ul>
+                            </td>
+                        </tr>
+
+                    </table>
+                </div>
+                <br />
+
+
+                <div class="row">
+                    <p>
+                        <strong>
+                            Implementation of view-surgery-details.component.html
+                        </strong>
+                    </p>
+                    <img src="./img/Surgery.PNG" alt="No Image" border="1"><br />
+                    <p>	Each surgery detail should have Edit Surgery button which will allow the user to edit the surgery details.</p>
+                    <p>
+                        On click of the Edit Surgery button, the editSurgery() method of the ViewSurgeryDetailsComponent must be invoked.
+                    </p>
+                    <p>	The Surgery Date field must display only the date part as shown above.</p>
+                    <p>
+                        <strong>
+                            Implementation of view-doctor.component.html
+                        </strong>
+                    </p>
+                    <img src="./img/Doctor.PNG" alt="No Image" border="1"><br />
+
+                    <p>
+                        <strong>
+                            Implementation of update-surgery.component.html
+                        </strong>
+                    </p>
+                    <img src="./img/UpdateSurgery.PNG" alt="No Image" border="1"><br /><br />
+
+                    <p>The Surgery Id must be read-only field. All other fields are required fields.</p>
+                    <p>The error messages must appear when the text boxes are either visited or modified.</p>
+
+                    <img src="./img/form_validation.PNG" alt="No Image" border="1"><br />
+                    <h5 style="text-align: center">
+                        **********END **********
+                    </h5>
+                </div>
+                <br />
+
+</body>
+<script src="./js/new.js" rel="text/javascript"></script>
+<script>showWelcome();</script>
+<style type="text/css">
+    .tg {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    .tg td {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        padding: 0px 7px;
+        border-style: solid;
+        border-width: 1px;
+        overflow: hidden;
+        word-break: normal;
+    }
+
+    .tg th {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        font-weight: normal;
+        padding: 0px 7px;
+        border-style: solid;
+        border-width: 1px;
+        overflow: hidden;
+        word-break: normal;
+    }
+
+    .tg .tg-nn8l {
+        font-weight: bold;
+        font-size: 15px;
+        font-family: Verdana, Geneva, sans-serif !important;
+        text-align: center
+    }
+
+    .tg .tg-d0y2 {
+        font-size: 15px;
+        font-family: Verdana, Geneva, sans-serif !important;
+        text-align: center
+    }
+
+    .tg .tg-7w48 {
+        font-size: 15px;
+        font-family: Verdana, Geneva, sans-serif !important;
+        text-align: left
+    }
+</style>
+
+</html>

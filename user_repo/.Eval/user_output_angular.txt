@@ -1,0 +1,7 @@
+
+> cure-well-app@0.0.0 ng C:\Users\Public\Desktop\user_repo\CureWell\CureWellApp
+> ng "test" "--browsers=ChromeHeadless" "--watch=false"
+
+[32m10 02 2022 17:53:28.125:INFO [karma]: [39mKarma v3.0.0 server started at http://0.0.0.0:9876/
+[32m10 02 2022 17:53:28.132:INFO [launcher]: [39mLaunching browser ChromeHeadless with unlimited concurrency
+[32m10 02 2022 17:53:28.173:INFO [launcher]: [39mStarting browser ChromeHeadless

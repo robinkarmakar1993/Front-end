@@ -1,0 +1,7 @@
+C:\Users\iapuser\AppData\Roaming\npm\ng -> C:\Users\iapuser\AppData\Roaming\npm\node_modules\@angular\cli\bin\ng
+
+> @angular/cli@9.0.0 postinstall C:\Users\iapuser\AppData\Roaming\npm\node_modules\@angular\cli
+> node ./bin/postinstall/script.js
+
++ @angular/cli@9.0.0
+added 293 packages from 207 contributors in 45.573s
